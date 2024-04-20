@@ -15,7 +15,7 @@
     <div>
       <b>Keywords: </b>
       {{ range .Params.tags }}
-      <a class="link" href='{{ "tags" | absURL }}/{{ . | urlize }}'>#{{ . }}</a>
+      <a class="link" href='{{ "tags" | relLangURL }}/{{ . | urlize }}'>#{{ . }}</a>
       {{ end }}
     </div>
     {{ end }}

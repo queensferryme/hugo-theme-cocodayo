@@ -84,7 +84,7 @@ time {
 }
 
 #wrapper {
-    background-color: #FAFAFA;
+    background-color: #282828;
     display: flex;
     flex-direction: column;
     font-family: 'Latin Modern Roman', 'Times New Roman', serif;
@@ -94,8 +94,13 @@ time {
 }
 
 .link {
-    color: #AA0000;
-    text-decoration: underline;
+    color: #98F5FF;
+    text-decoration: none;
+}
+
+.head {
+  color: #fbf1c7;
+  text-decoration: none;
 }
 
 .paginator {
@@ -174,4 +179,15 @@ time {
 
 #footer > .footnote {
     text-align: center;
+    color: #A89984;
+}
+
+#footer > .footlink {
+  color: #98F5FF;
+  text-decoration: none;
+}
+
+#footer > .footcontent {
+  color: #A89984;
+  text-decoration: none;
 }

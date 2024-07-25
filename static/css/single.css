@@ -1,5 +1,6 @@
 #main > h1 {
     text-align: center;
+    color: #fbf1c7;
 }
 
 #main > .content {
@@ -16,15 +17,16 @@
 }
 
 #main .toc {
-    background-color: #EEEEEE;
+    background-color: #32302F;
     border: black 1px dashed;
     display: inline-block;
     margin: 1rem;
     padding: .5rem 1rem;
+    color: #fbf1c7;
 }
 
 #main .toc a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 #main .toc li > ul {
@@ -33,6 +35,16 @@
 
 #main .toc ul {
     list-style: none;
+}
+
+#main .toctext {
+    color: #fbf1c7;
+}
+
+#main .keywords {
+    background-color: #32302F;
+    border-radius: 0.25rem;
+    padding: 0.2em 0.3em;
 }
 
 #main :target {

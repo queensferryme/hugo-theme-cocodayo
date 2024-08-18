@@ -5,6 +5,12 @@
 {{ define "main" }}
 <main id="main" class="archive">
   {{ $pages := where .Data.Pages "Type" "post" }}
+  {{ if strings.Contains .Permalink "%E5%BA%9F%E8%AF%9D" }}
+  {{ $pages = where $pages "Params.tags" "intersect" (slice "废话") }}
+  {{ else }}
+  {{ $excludedPages := where $pages "Params.tags" "intersect" (slice "废话") }}
+  {{ $pages = symdiff $pages $excludedPages }}
+  {{ end }}
   {{ range $pages.GroupByDate "2006-01" }}
   <div class="post-group">
     <h2>{{ dateFormat "January 2006" (printf "%s-01" .Key) }}</h2>

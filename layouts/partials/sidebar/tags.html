@@ -1,0 +1,10 @@
+<!-- display all tags line by line -->
+{{ $tags := .Site.Taxonomies.tags }}
+{{ if strings.Contains .Permalink "en" }}
+<h2>Tags:</h2>
+{{ else }}
+<h2>标签:</h2>
+{{ end }}
+{{ range $tags }}
+  <a style="color: #9d3c5e; " href="{{ .Page.Permalink }}">#{{ .Page.Title }}</a>
+{{ end }}

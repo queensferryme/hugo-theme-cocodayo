@@ -3,9 +3,9 @@
 {{ $fileContent := readFile "/static/sidebar/news/en.txt" }}
 {{ $lines := split $fileContent "\n" }}
 <ul>
-    {{ range $line := $lines }}
-      {{ if $line }}
-      <li><div style="color: #3b726c;">{{ $line | safeHTML }}</div></li>
+    {{ range first 3 $lines }}
+      {{ if . }}
+      <li><div style="color: #3b726c;">{{ . | safeHTML }}</div></li>
       {{ end }}
     {{ end }}
 </ul>
@@ -14,9 +14,9 @@
 {{ $fileContent := readFile "/static/sidebar/news/zh-cn.txt" }}
 {{ $lines := split $fileContent "\n" }}
 <ul>
-    {{ range $index, $line := $lines }}
-      {{ if $line }}
-      <li><div style="color: #3b726c;">{{ $line | safeHTML }}</div></li>
+    {{ range first 3 $lines }}
+      {{ if . }}
+      <li><div style="color: #3b726c;">{{ . | safeHTML }}</div></li>
       {{ end }}
     {{ end }}
 </ul>

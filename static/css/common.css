@@ -180,13 +180,13 @@ time {
 
 #wrapper > #mainPage > .leftbar {
     order: -1;
-    flex-basis: 20%;
+    flex-basis: 25%;
     flex-shrink: 0;
 }
 
 #wrapper > #mainPage > .rightbar {
     order: 1;
-    flex-basis: 20%;
+    flex-basis: 25%;
     flex-shrink: 0;
 }
 

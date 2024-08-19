@@ -1,2 +1,0 @@
-The new linux kernel is released!
-The new emacs kernel is released!

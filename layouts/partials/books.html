@@ -14,7 +14,7 @@
 {{ $fileContent := readFile "/static/sidebar/books/zh-cn.txt" }}
 {{ $lines := split $fileContent "\n" }}
 <ul>
-    {{ range $index, $line := $lines }}
+    {{ range $line := $lines }}
       {{ if $line }}
       <li><div style="color: #e17092;">{{ $line | safeHTML }}</div></li>
       {{ end }}

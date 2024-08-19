@@ -1,0 +1,23 @@
+{{ if strings.Contains .Permalink "en" }}
+<h2>Friends:</h2>
+{{ $fileContent := readFile "/static/sidebar/friends/en.txt" }}
+{{ $lines := split $fileContent "\n" }}
+<ul>
+    {{ range $line := $lines }}
+      {{ if $line }}
+      <li><div style="color: #e17092;">{{ $line | safeHTML }}</div></li>
+      {{ end }}
+    {{ end }}
+</ul>
+{{ else }}
+<h2>友链:</h2>
+{{ $fileContent := readFile "/static/sidebar/friends/zh-cn.txt" }}
+{{ $lines := split $fileContent "\n" }}
+<ul>
+    {{ range $index, $line := $lines }}
+      {{ if $line }}
+      <li><div style="color: #e17092;">{{ $line | safeHTML }}</div></li>
+      {{ end }}
+    {{ end }}
+</ul>
+{{ end }}

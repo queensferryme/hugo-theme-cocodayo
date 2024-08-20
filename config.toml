@@ -3,15 +3,15 @@
 # https://gohugo.io/getting-started/configuration #
 ###################################################
 
-baseURL = "https://texify.queensferry.me" # website root path
+baseURL = "https://forceoflife.cn/" # website root path
 disqusShortname = ""                      # disqus shortcode
 enableGitInfo = false                     # retrieve last modified date from git commits
 enableRobotsTXT = true                    # /robots.txt
 hasCJKLanguage = true                     # Chinese/Japanese/Korean
 paginate = 5                              # number of posts each page
 rssLimit = 10                             # maximum items in rss feeds
-theme = "hugo-theme-texify"               # theme directory name
-title = "TeXify"                          # website title
+theme = "hugo-theme-life"               # theme directory name
+title = "Life"                          # website title
 defaultContentLanguage = 'en'
 defaultContentLanguageInSubdir = true
 publishDir = "public"
@@ -30,12 +30,12 @@ style = "emacs" # syntax highlight style, see https://xyproto.github.io/splash/d
 
 [languages]
 [languages.en]
-title = "TeXify"
+title = "Life"
 languageName = "English"
 languageCode = "en"
 weight = 1
 [languages.zh-cn]
-title = "中文测试"
+title = "生活"
 languageName = "简体中文"
 languageCode = "zh-cn"
 weight = 2

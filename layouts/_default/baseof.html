@@ -53,11 +53,15 @@
 <body>
   <div id="wrapper">
     {{ partial "header.html" . }}
+    {{ if .IsHome }}
     <div id="mainPage">
-      <div class="leftbar">{{ partial "leftbar.html" . }}</div>
       <div class="content">{{ block "main" . }}{{ end }}</div>
+      <div class="leftbar">{{ partial "leftbar.html" . }}</div>
       <div class="rightbar">{{ partial "rightbar.html" . }}</div>
     </div>
+    {{ else }}
+    <div id="nonMain">{{ block "main" . }}{{ end }}</div>
+    {{ end }}
     {{ partial "footer.html" . }}
   </div>
 

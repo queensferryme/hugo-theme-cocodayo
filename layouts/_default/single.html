@@ -63,7 +63,7 @@
     <!-- disqus -->
     {{ template "_internal/disqus.html" . }}
     <!-- giscus -->
-    {{ if .Site.Params.giscus.enable }}
+    {{ if .Params.giscus }}
       {{ .Site.Params.giscus.script | safeHTML }}
     {{ end }}
     <!-- utterances -->

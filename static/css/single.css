@@ -56,7 +56,7 @@
 }
 
 @media only screen and (max-width: 1224px) {
-    .post-toc {
+    .toc {
         display: none;
     }
 }

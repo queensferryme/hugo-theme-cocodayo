@@ -16,29 +16,33 @@
     text-align: center;
 }
 
-#main .toc {
+.toc {
     background-color: #f5f5f5;
-    border: black 1px dashed;
-    display: inline-block;
-    margin: 1rem;
-    padding: .5rem 1rem;
-    color: #e17092;
+    position: fixed;
+    right:100px;
+    max-width:300px;
+    overflow:auto;
+    top: 180px;
+    width: 15vw;
+    bottom:50px;
+    color: #3b726c;
 }
 
-#main .toc a:hover {
+.toc h3 {
+    color: #9d3c5e;
+    font-weight: bold;
+}
+
+.toc a:hover {
     text-decoration: none;
 }
 
-#main .toc li > ul {
+.toc li > ul {
     margin-left: 1.5rem;
 }
 
-#main .toc ul {
+.toc ul {
     list-style: none;
-}
-
-#main .toctext {
-    color: #3b726c;
 }
 
 #main .keywords {
@@ -49,4 +53,10 @@
 
 #main :target {
     background-color: azure;
+}
+
+@media only screen and (max-width: 1224px) {
+    .post-toc {
+        display: none;
+    }
 }

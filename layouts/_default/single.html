@@ -1,8 +1,25 @@
 {{ define "head" }}
 <link rel="stylesheet" href='{{ "css/single.css" | absURL }}'>
+<head><style type="text/css">
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  height: 40px;
+  background-color: #eee;
+  border-radius: 16px;
+  &:hover {
+    background-color: #ddd;
+  }
+}
+</style></head>
 {{ end }}
 
 {{ define "main" }}
+<div class="toc">
+{{ partial "toc.html" . }}
+</div>
 <main id="main" class="post">
   {{ if ne .Section "post"}}
   <article class="content">
@@ -22,16 +39,6 @@
     <a class="link keywords" href='{{ "tags" | absLangURL }}/{{ . | urlize }}'>#{{ . }}</a>
     {{ end }}
   </div>
-  {{ end }}
-  {{ if cond (ne .Params.toc nil) .Params.toc .Site.Params.toc }}
-  {{ if ne .TableOfContents "<nav id=\"TableOfContents\"></nav>" }}
-  <details>
-    <summary class="toctext">
-        <b>Table of Contents</b>
-    </summary>
-    <div class="toc">{{ .TableOfContents }}</div>
-  </details>
-  {{ end }}
   {{ end }}
   <article class="content">
     {{ if .Site.Params.emphasisWithDots }}

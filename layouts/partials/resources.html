@@ -1,6 +1,6 @@
 {{ if strings.Contains .Permalink "en" }}
-<h2>Friends:</h2>
-{{ $fileContent := readFile "/static/sidebar/friends/en.txt" }}
+<h2>Resources:</h2>
+{{ $fileContent := readFile "/static/sidebar/resources/en.txt" }}
 {{ $lines := split $fileContent "\n" }}
 <ul>
     {{ range $line := $lines }}
@@ -10,8 +10,8 @@
     {{ end }}
 </ul>
 {{ else }}
-<h2>友链:</h2>
-{{ $fileContent := readFile "/static/sidebar/friends/zh-cn.txt" }}
+<h2>资源:</h2>
+{{ $fileContent := readFile "/static/sidebar/resources/zh-cn.txt" }}
 {{ $lines := split $fileContent "\n" }}
 <ul>
     {{ range $index, $line := $lines }}

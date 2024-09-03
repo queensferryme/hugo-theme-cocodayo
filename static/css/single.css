@@ -60,7 +60,7 @@
     background-color: azure;
 }
 
-@media only screen and (max-width: 1224px) {
+@media only screen and (max-width: 1400px) {
     .toc {
         display: none;
     }

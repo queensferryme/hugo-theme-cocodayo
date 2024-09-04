@@ -165,7 +165,6 @@ time {
     flex-direction: row;
     max-width: 1068px;
     width: calc(100% - 2rem);
-    flex-grow: 1;
 }
 
 #wrapper > #mainPage > .content, #wrapper > #mainPage > .leftbar, #wrapper > #mainPage > .rightbar {
@@ -192,7 +191,6 @@ time {
   align-self: center;
   display: flex;
   flex-direction: row;
-  flex-grow: 1;
   max-width: 1468px;
   width: calc(100% - 2rem);
 }

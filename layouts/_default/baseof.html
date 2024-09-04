@@ -60,7 +60,14 @@
       <div class="rightbar">{{ partial "rightbar.html" . }}</div>
     </div>
     {{ else }}
-    <div id="nonMain">{{ block "main" . }}{{ end }}</div>
+    <div id="nonMain">
+      <div class="toc">
+        {{ partial "toc.html" . }}
+      </div>
+      <div class="content">
+      {{ block "main" . }}{{ end }}
+      </div>
+    </div>
     {{ end }}
     {{ partial "footer.html" . }}
   </div>

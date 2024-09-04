@@ -16,9 +16,13 @@ aliases = ["migrate-from-jekyl"]
 toc = true
 +++
 
+## detail
+
 {{<detail "test">}}
 This is a test!
 {{</detail>}}
+
+## quote
 
 {{<blockquote author="Linus Torvalds" title="From Maillist">}}
 Talk is cheap, show me your code!

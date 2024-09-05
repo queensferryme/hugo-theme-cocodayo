@@ -133,7 +133,7 @@ script = """
 """
 
 [params.sidebar]
-enable = false
+enable = true
 
 [services]
   [services.googleAnalytics]

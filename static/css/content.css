@@ -44,14 +44,14 @@
 }
 
 .content blockquote {
-    background-color: #f5f5f5;
+    background-color: #f3ead3;
     border-left: black 2px solid;
     font-style: italic;
     padding: 1rem 0 1rem 2rem;
 }
 
 .content code {
-    background-color: #f5f5f5;
+    background-color: #f3ead3;
     border-radius: .2rem;
     color: #3b726c;
     font-family: 'Latin Modern Mono', Courier, monospace;
@@ -99,7 +99,7 @@
 }
 
 .content pre {
-    background-color: #f5f5f5!important;
+    background-color: #f3ead3!important;
     border-radius: .2rem;
     font-family: 'Latin Modern Mono', Courier, monospace;
     margin-top: .5rem;

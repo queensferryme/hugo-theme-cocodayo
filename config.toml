@@ -131,6 +131,10 @@ enable = false # whether to enable utterances
 # paste utterances' <script></script> configuration between the triple quotes
 script = """
 """
+
+[params.sidebar]
+enable = false
+
 [services]
   [services.googleAnalytics]
     ID = 'G-MEASUREMENT_ID'

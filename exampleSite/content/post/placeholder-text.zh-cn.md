@@ -7,6 +7,7 @@ tags = [
     "markdown",
     "text",
 ]
+toc = true
 +++
 
 测试

@@ -206,7 +206,7 @@ time {
     flex: 1;
 }
 
-#wrapper > #nonMain > .toc {
+#wrapper > #nonMain > .toc, #wrapper > #noSidebar > .toc {
     order: -1;
     flex-basis: 20%;
     background-color: #f5f5f5;
@@ -214,30 +214,38 @@ time {
     position: relative;
 }
 
-#wrapper > #nonMain > .toc h3 {
+#wrapper > #nonMain > .toc h3, #wrapper > #noSidebar > .toc h3 {
     color: #9d3c5e;
     font-weight: bold;
 }
 
-#wrapper > #nonMain > .toc ul {
+#wrapper > #nonMain > .toc ul, #wrapper > #noSidebar > .toc ul {
     list-style: none;
 }
 
-#wrapper > #nonMain > .toc li > ul {
+#wrapper > #nonMain > .toc li > ul, #wrapper > #noSidebar > .toc li > ul {
     margin-left: 1.5rem;
 }
 
-#wrapper > #nonMain > .toc a {
+#wrapper > #nonMain > .toc a, #wrapper > #noSidebar > .toc a {
     color: #3b726c;
 }
 
-#wrapper > #nonMain > .toc a:hover {
+#wrapper > #nonMain > .toc a:hover, #wrapper > #noSidebar > .toc a:hover {
     color: #e17092;
     text-decoration: none;
 }
 
-#wrapper > #nonMain > .toc a:active {
+#wrapper > #nonMain > .toc a:active, #wrapper > #noSidebar > .toc a:active {
     color: #e17092;
+}
+
+#wrapper > #noSidebar {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 768px;
+    width: calc(100% - 2rem);
 }
 
 @media (max-width: 1200px) {

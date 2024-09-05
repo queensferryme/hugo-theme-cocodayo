@@ -53,6 +53,7 @@
 <body>
   <div id="wrapper">
     {{ partial "header.html" . }}
+    {{ if .Site.Params.sidebar.enable }}
     {{ if .IsHome }}
     <div id="mainPage">
       <div class="content">{{ block "main" . }}{{ end }}</div>
@@ -67,6 +68,14 @@
       <div class="content">
       {{ block "main" . }}{{ end }}
       </div>
+    </div>
+    {{ end }}
+    {{ else }}
+    <div id="noSidebar">
+      <div class="toc">
+        {{ partial "toc.html" . }}
+      </div>
+      <div class="content">{{ block "main" . }}{{ end }}</div>
     </div>
     {{ end }}
     {{ partial "footer.html" . }}

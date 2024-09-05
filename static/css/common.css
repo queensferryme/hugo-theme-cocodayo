@@ -188,21 +188,22 @@ time {
 }
 
 #wrapper > #nonMain {
-  align-self: center;
-  display: flex;
-  flex-direction: row;
-  max-width: 1468px;
-  width: calc(100% - 2rem);
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    max-width: 1468px;
+    width: calc(100% - 2rem);
 }
 
 #wrapper > #nonMain > .content, #wrapper > #nonMain > .toc {
-  box-sizing: border-box;
-  padding: 1em;
+    box-sizing: border-box;
+    padding: 1em;
 }
 
 #wrapper > #nonMain > .content {
-  max-width: 768px;
-  width: 100%;
+    max-width: 768px;
+    width: 100%;
+    flex: 1;
 }
 
 #wrapper > #nonMain > .toc {
@@ -210,6 +211,7 @@ time {
     flex-basis: 20%;
     background-color: #f5f5f5;
     color: #3b726c;
+    position: relative;
 }
 
 #wrapper > #nonMain > .toc h3 {
@@ -238,9 +240,10 @@ time {
     color: #e17092;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     #wrapper > #mainPage {
         flex-direction: column;
+        align-items: center;
     }
 
     #wrapper > #mainPage > .content {
@@ -260,11 +263,11 @@ time {
 
     #wrapper > #nonMain {
         flex-direction: column;
+        align-items: center;
     }
 
     #wrapper > #nonMain > .toc {
-        order: 0;
-        flex-basis: 100%;
+        display: none;
     }
 
     #wrapper > #nonMain > .content {

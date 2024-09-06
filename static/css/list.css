@@ -1,3 +1,7 @@
+#main > .post-group {
+  color: #e17092;
+}
+
 #main > .post-group > ul {
     border-left: gray solid 1px;
     list-style-type: none;

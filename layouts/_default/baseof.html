@@ -6,18 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <!-- author -->
-  <meta name="author" content="{{ .Site.Author.name }}">
-
-  <!-- description -->
-  {{ if .Description }}
-  <meta name="description" content="{{ .Description }}">
-  {{ else if and .IsPage .Summary }}
-  <meta name="description" content="{{ .Summary }}">
-  {{ else }}
-  <meta name="description" content="{{ .Site.Params.description }}">
-  {{ end }}
-
   <!-- favicon -->
   <link rel="icon" href="{{ .Site.Params.favicon | absURL }}">
 
@@ -59,16 +47,37 @@
   <title>{{ .Title }} - {{ .Site.Title }}</title>
   {{ end }}
 
-  <!-- twitter -->
-  {{ template "_internal/twitter_cards.html" . }}
-
   {{ block "head" . }}{{ end }}
 </head>
 
 <body>
   <div id="wrapper">
     {{ partial "header.html" . }}
-    {{ block "main" . }}{{ end }}
+    {{ if .Site.Params.sidebar.enable }}
+    {{ if .IsHome }}
+    <div id="mainPage">
+      <div class="content">{{ block "main" . }}{{ end }}</div>
+      <div class="leftbar">{{ partial "leftbar.html" . }}</div>
+      <div class="rightbar">{{ partial "rightbar.html" . }}</div>
+    </div>
+    {{ else }}
+    <div id="nonMain">
+      <div class="toc">
+        {{ partial "toc.html" . }}
+      </div>
+      <div class="content">
+      {{ block "main" . }}{{ end }}
+      </div>
+    </div>
+    {{ end }}
+    {{ else }}
+    <div id="noSidebar">
+      <div class="toc">
+        {{ partial "toc.html" . }}
+      </div>
+      <div class="content">{{ block "main" . }}{{ end }}</div>
+    </div>
+    {{ end }}
     {{ partial "footer.html" . }}
   </div>
 
@@ -83,7 +92,7 @@
   {{ end }}
 
   <!-- google analytics -->
-  {{ template "_internal/google_analytics_async.html" . }}
+  {{ template "_internal/google_analytics.html" . }}
 
 </body>
 

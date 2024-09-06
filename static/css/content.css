@@ -15,8 +15,8 @@
 }
 
 .content a {
-    color: #AA0000;
-    text-decoration: underline;
+    color: #e17092;
+    text-decoration: none;
 }
 
 .content a.footnote-ref::before {
@@ -44,22 +44,25 @@
 }
 
 .content blockquote {
+    background-color: #f3ead3;
     border-left: black 2px solid;
     font-style: italic;
     padding: 1rem 0 1rem 2rem;
 }
 
 .content code {
-    background-color: #F5F5F5;
+    background-color: #f3ead3;
     border-radius: .2rem;
-    color: #AA0000;
+    color: #3b726c;
     font-family: 'Latin Modern Mono', Courier, monospace;
+    font-weight: bold;
     padding: 0 .2rem;
 }
 
 .content h1, .content h2, .content h3,
 .content h4, .content h5, .content h6 {
     line-height: 1.5;
+    color: #9d3c5e;
 }
 
 .content h1 {
@@ -92,10 +95,11 @@
 
 .content p {
     text-align: justify;
+    color: #9466aa;
 }
 
 .content pre {
-    background-color: #F5F5F5!important;
+    background-color: #f3ead3!important;
     border-radius: .2rem;
     font-family: 'Latin Modern Mono', Courier, monospace;
     margin-top: .5rem;
@@ -123,6 +127,7 @@
 .content td, .content th {
     border: #575C61 1px solid;
     padding: .1rem .5rem;
+    color: #b08b35;
 }
 
 .content th {
@@ -132,4 +137,5 @@
 
 .content ol, .content ul {
     margin-left: 1.5rem;
+    color: #3b726c;
 }
